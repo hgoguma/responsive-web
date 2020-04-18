@@ -20,3 +20,23 @@ a {
 .navbar_logo i {
     color: #d49466;
 }
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_icons {
+    list-style-type: none;
+    color: white;
+    display: flex;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
