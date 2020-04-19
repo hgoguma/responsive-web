@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube Mobile</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d4e7bbd25.js" crossorigin="anonymous"></script>
     <script src="./main.js" defer></script>
 </head>
@@ -15,91 +16,104 @@
             <i class="fab fa-youtube"></i>
             <span class="title">Youtube</span>
         </div>
-        <ul class="icons">
-            <li><a href="#"><i class="fas fa-search"></i></a></li>
-            <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
-        </ul>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
     </header>
     
     <!--Video Player-->
     <section class="player">
-        <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
     </section>
 
-    <!--Video Info -->
-    <section class="info">
-        <div class="metadata">
-            <ul class="hashtags">
-                <li>#하이</li>
-                <li>#유튜브 코딩</li>
-                <li>#보헤미안 랩소디</li>
-            </ul>
-            <div class="titleAndButton">
-                <span class="title">
-                    나는 보헤미안 랩소디!
-                </span>
-                <button class="moreBtn">
-                    <i class="fas fa-caret-down"></i>
-                </button>
-            </div>
-            <div class="views">
+    <div class="infoAndUpNext">
+        <!--Video Info -->
+        <section class="info">
+            <div class="metadata">
+                <ul class="hashtags">
+                    <li>#하이</li>
+                    <li>#유튜브 코딩</li>
+                    <li>#보헤미안 랩소디</li>
+                </ul>
+                <div class="titleAndButton">
+                    <span class="title clamp">
+                        나는 보헤미안 랩소디! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum id voluptatibus reiciendis, asperiores beatae reprehenderit repellendus, voluptates odio ipsum eaque excepturi adipisci ipsam corrupti debitis quos perferendis facilis sed similique.
+                    </span>
+                    <button class="moreBtn">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </div>
                 <span class="views">1M views 1 month ago</span>
             </div>
-        </div>
-        <div class="actions">
-            <li>
-                <button><i class="fas fa-thumbs-up"></i><span>1K</span></button>
-            </li>
-            <li>
-                <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
-            </li>
-            <li>
-                <button><i class="fas fa-share"></i><span>Share</span></button>
-            </li>
-            <li>
-                <button><i class="fas fa-plus"></i><span>Save</span></button>
-            </li>
-            <li>
-                <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
-            </li>
-        </div>
-        <div class="channel">
-            <div class="metadata">
-                <img src="./image/alpaca.jpg" alt="alpaca" />
-                <div class="info">
-                    <span class="name">알파카</span>
-                    <span class="subscribers">1M subscribers</span>
-                </div>
+            <div class="actions">
+                <li>
+                    <button><i class="active fas fa-thumbs-up"></i><span>1K</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-share"></i><span>Share</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-plus"></i><span>Save</span></button>
+                </li>
+                <li>
+                    <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
+                </li>
             </div>
-            <button class="subscribe">subscribe</button>
-        </div>
-    </section>
-    <section class="upNext">
-        <span class="title">Up next</span>
-        <ul>
-            <li class="item">
-                <img src="./image/milkboy.jpg" alt="milkboy">
-                <span class="title"></span>
-                <span class="name"></span>
-                <span class="views"></span>
-                <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-            <li class="item">
-                <img src="./image/cute.jpg" alt="cute">
-                <span class="title"></span>
-                <span class="name"></span>
-                <span class="views"></span>
-                <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-            <li class="item">
-                <img src="./image/heart.jpg" alt="heart">
-                <span class="title"></span>
-                <span class="name"></span>
-                <span class="views"></span>
-                <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-        </ul>
-    </section>
+            <div class="channel">
+                <div class="metadata">
+                    <img src="./image/alpaca.jpg" alt="alpaca" />
+                    <div class="info">
+                        <span class="name">알파카</span>
+                        <span class="subscribers">1M subscribers</span>
+                    </div>
+                </div>
+                <button class="subscribe">subscribe</button>
+            </div>
+        </section>
+        <section class="upNext">
+            <span class="title">Up next</span>
+            <ul>
+                <li class="item">
+                    <div class="img">
+                        <img src="./image/milkboy.jpg" alt="milkboy" />
+                    </div>
+                    <div class="info">
+                        <span class="title">귀여워</span>
+                        <span class="name">당신은 귀엽다</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img">
+                        <img src="./image/cute.jpg" alt="cute" />
+                    </div>
+                    <div class="info">
+                        <span class="title">보조개</span>
+                        <span class="name">보조개 살인마</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img">
+                        <img src="./image/heart.jpg" alt="heart" />
+                    </div>
+                    <div class="info">
+                        <span class="title">K-하트</span>
+                        <span class="name">K-하트 제조기</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </section>
+    </div>
+    
 
 </body>
 </html>
