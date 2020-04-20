@@ -1,0 +1,52 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: #d49466;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav .logo i {
+    color: var(--accent-color)
+}
+
+nav .menu ul {
+    display: flex;
+}
+
+nav .menu li {
+    padding: 10px 10px;
+}
+
+nav .icons ul {
+    display: flex;
+}
+
+nav .icons li {
+    padding: 5px 5px;
+}
+
+nav .icons li i {
+    color: var(--text-color)
+}
