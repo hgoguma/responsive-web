@@ -7,14 +7,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <input id="input1" type="text" value="hello" />
+    <p id="text">Before</p>
 </body>
 <script>
+    let delta = 300;
+    let timer = null;
 
-    //생성자 함수 선언
-    function Person(name) {
-        this.name = name || "brad";
+    $(window).on('resize', function() {
+        console.log('resize func!!')
+        clearTimeout(timer) //clearTimeout() : setTimeout을 중지시킴
+        timer = setTimeout(resizeDone, delta);
+    });
+
+    function resizeDone() {
+        $('#text').text('After!!');
     }
 
+    window.addEventListener('resize', function() {
+        clearTimeout(timer);
+        timer = setTimeout(resizeDone, delta);
+    }, false);
 </script>
 </html>

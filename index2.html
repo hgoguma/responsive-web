@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="text">Before</p>
+</body>
+<script>
+
+    function resizeThrottle() {
+        var rtime;
+        var timeout = false; 
+        var delta = 300;
+
+        $(window).resize(function() {
+            rtime = new Date();
+            if(timeout === false) {
+                timeout = true;
+                setTimeout(resizeend, delta);
+            }
+        });
+
+        function resizeend() { //resize 감지?
+            if(new Date() - rtime < delta) { 
+                setTimeout(resizeend, delta);
+            } else { //resize가 끝나면
+                timeout = false;
+                resizeDone();
+            }
+        }
+    }
+
+    function resizeDone() {
+        console.log('resizeDone func!!');
+        $('#text').text('After!!').css('color', 'red');
+    }
+
+    resizeThrottle();
+   
+</script>
+</html>
